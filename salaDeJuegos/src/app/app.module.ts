@@ -19,6 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 
+
 import { MapaComponent } from './utils/mapa/mapa.component';
 
 
