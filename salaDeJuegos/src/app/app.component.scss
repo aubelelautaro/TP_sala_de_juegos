@@ -7,6 +7,16 @@
     display: table;
 }
 
+span
+{
+  text-align: center;
+}
+
+a
+{
+  text-align: center;
+}
+
 table {
     width: 100%;
   }
@@ -54,11 +64,3 @@ mat-form-field.mat-form-field
   .example-header-image {
     background-size: cover;
   }
-
-  .example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-size: cover;
-  };
