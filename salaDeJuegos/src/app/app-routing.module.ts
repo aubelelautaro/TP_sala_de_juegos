@@ -11,11 +11,11 @@ const routes: Routes = [
   component: HomeComponent
 },
 {
-  path:'/listadoJugadores',
+  path:'listadoJugadores',
   component: ListadoJugadoresComponent
 },
 {
-  path:'/jugadores',
+  path:'jugadores',
   component: JugadoresComponent
 },
 {
