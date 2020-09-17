@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
 
 import { MapaComponent } from './utils/mapa/mapa.component';
 
@@ -42,6 +43,7 @@ import { MapaComponent } from './utils/mapa/mapa.component';
     MatInputModule,
     MatTableModule,
     MatMenuModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
