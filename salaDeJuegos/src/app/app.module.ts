@@ -10,8 +10,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JugadoresComponent } from './components/jugadores/jugadores.component';
 import { ListadoJugadoresComponent } from './components/listado-jugadores/listado-jugadores.component';
 
-
+import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatMenuModule} from '@angular/material/menu';
+
+import { MapaComponent } from './utils/mapa/mapa.component';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +28,20 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     JuegosComponent,
     NotFoundComponent,
     JugadoresComponent,
-    ListadoJugadoresComponent
+    ListadoJugadoresComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
