@@ -1,1 +1,18 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink='juegos' routerLinkActive="active">Jugar</a>
+        <a mat-menu-item routerLink='listadoJugadores' routerLinkActive="active">Listado de Jugadores</a>
+      </mat-menu>
+      <span>Sala de juegos</span>
+      <span class="example-spacer"></span>
+  
+      <a mat-icon-button aria-label="Example icon button with a home icon" routerLink='' routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+      </a>
+    </mat-toolbar>
+</p>
 <h2 style="text-align: center;">Bienvenido/a a la sala de juegos de Aubele Lautaro</h2>

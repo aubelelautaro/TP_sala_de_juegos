@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 
 
 import { MapaComponent } from './utils/mapa/mapa.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MapaComponent } from './utils/mapa/mapa.component';
     NotFoundComponent,
     JugadoresComponent,
     ListadoJugadoresComponent,
-    MapaComponent
+    MapaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
