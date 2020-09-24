@@ -9,10 +9,18 @@
       </mat-menu>
       <span>Sala de juegos</span>
       <span class="example-spacer"></span>
-  
+
+      <a mat-button routerLink='acercaDe' routerLinkActive="active">
+        Acerca de
+        <mat-icon>perm_identity</mat-icon>
+      </a>
+      
       <a mat-icon-button aria-label="Example icon button with a home icon" routerLink='' routerLinkActive="active">
         <mat-icon>home</mat-icon>
       </a>
     </mat-toolbar>
 </p>
-<h2 style="text-align: center;">Bienvenido/a a la sala de juegos de Aubele Lautaro.... todo tendria que ser hija de home?consultar al profe</h2>
+<h2 style="text-align: center;">Bienvenido/a a la sala de juegos de Aubele Lautaro</h2>
+<div>
+  <router-outlet></router-outlet> <!-- HACERLO CON UN RESPONSIVE Y METERLO EN UN DIV?!--> 
+</div>

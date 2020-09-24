@@ -19,6 +19,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 
+import { HttpService } from './service/http.service';
+import { AuthService } from './service/auth.service';
 
 import { MapaComponent } from './utils/mapa/mapa.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,6 +31,10 @@ import { AdivinaElNumeroComponent } from './components/adivina-el-numero/adivina
 import { TaTeTiComponent } from './components/ta-te-ti/ta-te-ti.component';
 import { MemotestComponent } from './components/memotest/memotest.component';
 
+
+import{ HttpClientModule } from '@angular/common/http';1
+import { ListadoComponent } from './components/pages/listado/listado.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +51,9 @@ import { MemotestComponent } from './components/memotest/memotest.component';
     AgilidadAritmeticaComponent,
     AdivinaElNumeroComponent,
     TaTeTiComponent,
-    MemotestComponent
+    MemotestComponent,
+    ListadoComponent,
+    AcercaDeComponent
   ],
   imports: [
     BrowserModule,
@@ -59,8 +67,13 @@ import { MemotestComponent } from './components/memotest/memotest.component';
     MatTableModule,
     MatMenuModule,
     MatCardModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: 
+  [
+    HttpService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
