@@ -22,6 +22,12 @@ import {MatCardModule} from '@angular/material/card';
 
 import { MapaComponent } from './utils/mapa/mapa.component';
 import { LoginComponent } from './components/login/login.component';
+import { AnagramaComponent } from './components/anagrama/anagrama.component';
+import { PiedraPapelTijeraComponent } from './components/piedra-papel-tijera/piedra-papel-tijera.component';
+import { AgilidadAritmeticaComponent } from './components/agilidad-aritmetica/agilidad-aritmetica.component';
+import { AdivinaElNumeroComponent } from './components/adivina-el-numero/adivina-el-numero.component';
+import { TaTeTiComponent } from './components/ta-te-ti/ta-te-ti.component';
+import { MemotestComponent } from './components/memotest/memotest.component';
 
 
 @NgModule({
@@ -33,7 +39,13 @@ import { LoginComponent } from './components/login/login.component';
     JugadoresComponent,
     ListadoJugadoresComponent,
     MapaComponent,
-    LoginComponent
+    LoginComponent,
+    AnagramaComponent,
+    PiedraPapelTijeraComponent,
+    AgilidadAritmeticaComponent,
+    AdivinaElNumeroComponent,
+    TaTeTiComponent,
+    MemotestComponent
   ],
   imports: [
     BrowserModule,
