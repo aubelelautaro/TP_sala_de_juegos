@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,11 +14,12 @@ import { ListadoJugadoresComponent } from './components/listado-jugadores/listad
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import {MatInputModule, MatTextareaAutosize} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { HttpService } from './service/http.service';
 import { AuthService } from './service/auth.service';
@@ -59,6 +61,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -68,6 +71,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     MatMenuModule,
     MatCardModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: 
   [
