@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject} from '@angular/core';
-
+import { EstadisticasService } from 'src/app/service/estadisticas.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
@@ -9,20 +9,27 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class AnagramaComponent implements OnInit {
 
-    arrayDePalabras : string[] = ["Control","Monitor","Celular","Televisión","Mouse","Teclado","Procesador","Auriculares","Gabinete","Microfono"];
-    
-    palabraElegida : string;
-    
-    palabraRta : string;
+  arrayDePalabras : string[] = ["Control","Monitor","Celular","Televisión","Mouse","Teclado","Procesador","Auriculares","Gabinete","Microfono"];
+  
+  palabraElegida : string;
+  
+  palabraRta : string;
 
-    palabraIngresada: string;
-    
-    bandJuego: boolean=false;
-    bandVerificar : boolean=true;
+  palabraIngresada: string;
+  
+  bandJuego: boolean=false;
+  bandVerificar : boolean=true;
 
-  constructor(public dialog: MatDialog){}
+  constructor(public dialog: MatDialog, public estadisticas:EstadisticasService){}
 
-  ngOnInit(): void{}
+  ngOnInit(): void
+  {
+    this.estadisticas.getEstadisticasJugador('anagrama');
+  }
+
+  ngOnDestroy(){
+    this.estadisticas.cargarEstadisticas('anagrama',this.estadisticas.jugador.anagrama.puntuacion);
+  }
 
   generarPalabra() 
   {
@@ -62,6 +69,7 @@ export class AnagramaComponent implements OnInit {
       if(this.palabraRta == this.palabraIngresada)
       {
         this.mensaje("Palabra adivinada","Ganaste!");
+        this.estadisticas.jugador.anagrama.puntuacion++;
         this.generarPalabra();
       }
       else

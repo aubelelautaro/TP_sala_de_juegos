@@ -1,1 +1,11 @@
-<p>adivina-el-numero works!</p>
+<div class="container">
+    <div class="juego">
+    <form action="">
+            <h3>Adiviná el numero entre 0 y 10.</h3>
+        <mat-form-field class="example-full-width" style="width:100%" >
+            <input matInput name="numeroIngresado" [(ngModel)]="numeroIngresado" placeholder="Ingrese numero">
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="verificarRespuesta()">Verificar respuesta</button>
+    </form>
+    </div>
+</div>

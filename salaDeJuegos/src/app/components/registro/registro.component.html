@@ -1,7 +1,7 @@
 <div align="center">
     <mat-card style="max-width: 250px;width: 60%;">
         <mat-card-header style="text-align: center;">
-            <h2 style="text-align: center; margin-left: 14%;">Iniciar Sesión</h2>
+            <h2 style="text-align: center; margin-left: 14%;">Registrarse</h2>
         </mat-card-header>
         <mat-card-content>
             <form [formGroup]="form" class="example-form">
@@ -17,10 +17,9 @@
                 </mat-form-field>
             </form>
             <br>
-            <button mat-raised-button color="primary" [disabled]="!form.valid" style="width: 160px;" (click)="verificar()">Iniciar sesión</button>
+            <button mat-raised-button color="primary" [disabled]="!form.valid" style="width: 160px;" (click)="registrarse()">Registrarse</button>
             <br>
             <br>
-            <button mat-button color="primary" routerLink="/registro">Registrarse</button>
         </mat-card-content>
     </mat-card>
 </div>

@@ -1,1 +1,13 @@
-<p>agilidad-aritmetica works!</p>
+<div class="container">
+    <div class="juego">
+    <form action="">
+            <h3>Operación a responder: {{operacionStr}}</h3>
+        <mat-form-field class="example-full-width" style="width:100%" >
+            <input matInput name="numeroIngresado" [(ngModel)]="numeroIngresado" placeholder="Ingrese la respuesta de la cuenta">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="generarCuenta()" [disabled]="bandJuego==true">Generar cuenta</button>
+        <button mat-raised-button color="accent" (click)="verificarRespuesta()" [disabled]="bandVerificar==true">Verificar respuesta</button>
+        <button mat-raised-button color="primary" (click)="generarCuenta()" [disabled]="bandVerificar==true">Cambiar cuenta</button>
+    </form>
+    </div>
+</div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { EstadisticasService } from 'src/app/service/estadisticas.service';
 
 @Component({
   selector: 'app-piedra-papel-tijera',
@@ -17,10 +19,11 @@ export class PiedraPapelTijeraComponent implements OnInit {
   numeroSecreto: number;
   numeroIngresado: number;
 
-  constructor() { }
+  constructor(public estadisticas: EstadisticasService,public dialog: MatDialog) { }
 
   ngOnInit(): void
   {
+    this.estadisticas.getEstadisticasJugador('piedraPapelTijera');
   }
 
   eleccion(elec : number)
@@ -70,6 +73,8 @@ export class PiedraPapelTijeraComponent implements OnInit {
           }
           else if (this.numeroIngresado == 2) {
               this.resultado = "GANASTE";
+              this.estadisticas.jugador.ppt.puntuacion += 1;
+              this.estadisticas.cargarEstadisticas('piedraPapelTijera',this.estadisticas.jugador.ppt.puntuacion);
           }
           else{
               this.resultado = "EMPATASTE";
@@ -84,6 +89,8 @@ export class PiedraPapelTijeraComponent implements OnInit {
           }
           else{
               this.resultado = "GANASTE";
+              this.estadisticas.jugador.ppt.puntuacion += 1;
+              this.estadisticas.cargarEstadisticas('piedraPapelTijera',this.estadisticas.jugador.ppt.puntuacion);
           }
           break;
       case 3:
@@ -95,6 +102,8 @@ export class PiedraPapelTijeraComponent implements OnInit {
           }
           else{
               this.resultado = "GANASTE";
+              this.estadisticas.jugador.ppt.puntuacion += 1;
+              this.estadisticas.cargarEstadisticas('piedraPapelTijera',this.estadisticas.jugador.ppt.puntuacion);
           }
           break;
       default:
@@ -109,4 +118,24 @@ export class PiedraPapelTijeraComponent implements OnInit {
     this.visuales = false;
   }
 
+}
+
+@Component({
+  selector: 'dialogo',
+  templateUrl: 'dialogo.html',
+})
+export class Dialogo
+{
+  constructor(
+  public dialogRef: MatDialogRef<Dialogo>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
+
+    cerrarDialogo()
+    {
+      this.dialogRef.close();
+    }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

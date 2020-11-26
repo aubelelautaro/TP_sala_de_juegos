@@ -1,1 +1,14 @@
-<p>memotest works!</p>
+<div class="container">
+    <div class="juego">
+        <h1> Elija </h1>
+        <mat-grid-list cols="5" rowHeight="1:1" style="min-width: 400px;max-width: 700px;">
+            <div *ngFor="let posicion of posiciones; let indice=index">
+                <mat-grid-tile>
+                    <button mat-flat-button  (click)="ElegirOpcion(indice)" class="btnOpciones" color="primary"> 
+                        <mat-icon *ngIf="posiciones[indice].visible">{{posiciones[indice].icono}}</mat-icon>
+                    </button>
+                </mat-grid-tile>
+            </div>
+            </mat-grid-list>
+    </div>
+</div>

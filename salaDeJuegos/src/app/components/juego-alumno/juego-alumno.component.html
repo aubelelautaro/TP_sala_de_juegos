@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="juego">
+    <form action="">
+            <h3>Palabra a adivinar las vocales: {{palabraElegida}}</h3>
+        <mat-form-field class="example-full-width" style="width:100%" >
+            <input matInput name="palabraIngresada" [(ngModel)]="palabraIngresada" placeholder="Ingrese la palabra con las vocales ocultas.">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="generarPalabra()" [disabled]="bandJuego==true">Generar palabra</button>
+        <button mat-raised-button color="accent" (click)="verificarPalabra()" [disabled]="bandVerificar==true">Verificar palabra</button>
+        <button mat-raised-button color="primary" (click)="generarPalabra()" [disabled]="bandVerificar==true">Cambiar palabra</button>
+    </form>
+    </div>
+</div>

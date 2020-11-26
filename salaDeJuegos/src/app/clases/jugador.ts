@@ -1,6 +1,12 @@
 export class Jugador{
-    indice: number;
-    nombre: string;
-    juego: string;
-    puntaje: number;
+    correo:string;
+    clave:string;
+    nombre:string;
+    anagrama:any;
+    ppt:any;
+    aa:any; 
+    an:any;
+    tateti:any;
+    memotest:any;
+    ja:any;
 }

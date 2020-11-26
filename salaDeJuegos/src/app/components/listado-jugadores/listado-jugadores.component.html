@@ -1,29 +1,143 @@
-<mat-card>Listado de jugadores</mat-card>
+<table>
+<th>
+    <mat-card class="example-card" >
+        <mat-card-header>
+        <mat-card-title style="text-align: center; margin-left: 50%;">Anagrama</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of anagrama;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.anagrama" align="center">Tu puntuación: {{estadisticas.jugador.anagrama.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+</th>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<th>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Piedra, papel o tijera</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of ppt;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.ppt" align="center">Tu puntuación: {{estadisticas.jugador.ppt.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+</th>
 
+<th>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Agilidad aritmética</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of aa;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.aa" align="center">Tu puntuación: {{estadisticas.jugador.aa.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+</th>
 
-    <!--  -->
-    <ng-container matColumnDef="indice">
-      <th mat-header-cell *matHeaderCellDef> Nro. </th>
-      <td mat-cell *matCellDef="let jugador"> {{jugador.indice}} </td>
-    </ng-container>
+<tr>
+    <th>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Adivina el Número</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of an;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.an" align="center">Tu puntuación: {{estadisticas.jugador.an.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+    </th>
+    
+    <th>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Ta Te Ti</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of tateti;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.tateti" align="center">Tu puntuación: {{estadisticas.jugador.tateti.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+    </th>
 
-    <ng-container matColumnDef="jugador">
-      <th mat-header-cell *matHeaderCellDef> Jugador </th>
-      <td mat-cell *matCellDef="let jugador"> {{jugador.nombre}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="puntaje">
-      <th mat-header-cell *matHeaderCellDef> Puntaje </th>
-      <td mat-cell *matCellDef="let jugador"> {{jugador.puntaje}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="juego">
-      <th mat-header-cell *matHeaderCellDef> Juego </th>
-      <td mat-cell *matCellDef="let jugador"> {{jugador.juego}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
-    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
-  </table>
+    <th>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Memotest</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of memotest;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.memotest" align="center">Tu puntuación: {{estadisticas.jugador.memotest.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+    </th>
+</tr>
+    <th>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Adiviná las vocales</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <div *ngFor="let p of juegoAlumno;">
+                <label>
+                    <b>Jugador:       {{p.jugador}}, Puntos: {{p.puntuacion}}</b>
+                </label>
+                <br>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        <div style="color: blueviolet;" *ngIf="estadisticas.jugador.ja" align="center">Tu puntuación: {{estadisticas.jugador.ja.puntuacion}}</div>
+        </mat-card-actions>
+    </mat-card>
+    </th>
+    
+</table>
